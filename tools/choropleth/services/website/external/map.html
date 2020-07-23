@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+  <title>DataCommons Choropleth</title>
+  <style>
+    div {
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    svg {
+      border-style: solid;
+      border-radius: 2px;
+      border-color: black;
+    }
+
+    .border {
+      stroke: black;
+      stroke-dasharray: 5;
+      stroke-width: 1px; 
+    }
+  </style>
+</head>
+<body>
+<div id="content">
+  <svg width="1000px" height="600px">
+      <g class="map"></g>
+      <g class="bounding-box"><rect></rect></g>
+      <g class="centroid"><circle r="4"></circle></g>
+  </svg>
+  <div id="display"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js" defer></script>
+<script src="map.js" defer></script>
+</body>
+</html>

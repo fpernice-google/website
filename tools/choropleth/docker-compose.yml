@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  choropleth_server:
+    build: ./services/choropleth_server
+    command: python manage.py run -h 0.0.0.0
+    volumes:
+      - ./services/choropleth_server/:/usr/src/app/
+    ports:
+      - 5000:5000
+    env_file:
+      - ./.envProd
+  nginx:
+    build: ./services/website
+    ports:
+      - 80:80
+    restart: always
+    depends_on: 
+      - choropleth_server

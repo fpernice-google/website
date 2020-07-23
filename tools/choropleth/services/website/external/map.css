@@ -1,0 +1,10 @@
+div {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+svg {
+    border-style: solid;
+    border-radius: 2px;
+    border-color: black;
+}
